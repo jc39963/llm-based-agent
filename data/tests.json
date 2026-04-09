@@ -1,0 +1,33 @@
+[
+  {
+    "id": 1,
+    "category": "Happy Path",
+    "input": "I have chicken breast, spinach, and garlic. Find me a healthy dinner.",
+    "expected_outcome": "Agent calls get_recipes, finds a valid chicken dish, and provides instructions using these ingredients."
+  },
+  {
+    "id": 2,
+    "category": "Happy Path",
+    "input": "I have eggs, flour, and sugar. What can I bake?",
+    "expected_outcome": "Agent suggests simple baking items like pancakes, crepes, or a simple sponge cake."
+  },
+  {
+    "id": 3,
+    "category": "Happy Path",
+    "input": "I have ground beef, pasta, and tomato sauce.",
+    "expected_outcome": "Agent identifies classic Italian-style dishes like Spaghetti Bolognese."
+  },
+  {
+    "id": 4,
+    "category": "Constraint Stress-Test",
+    "input": "I have shrimp and heavy cream, but I am allergic to garlic. Find a recipe.",
+    "expected_outcome": "Agent must call get_recipes with 'garlic' in excludeIngredients and verify the final recipe is garlic-free."
+  },
+  {
+    "id": 5,
+    "category": "Constraint Stress-Test",
+    "input": "I have chickpeas and sweet potatoes. I need a Vegan recipe.",
+    "expected_outcome": "Agent filters for vegan results and ensures no dairy or meat is suggested in the instructions."
+  }
+  
+]
